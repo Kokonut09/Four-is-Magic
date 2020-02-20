@@ -12,14 +12,19 @@ public class Four {
 
 	}
 	
-	/** Returns the lenght of any int's String version
+	/** Returns the length of any int's String version
 	 * 
 	 * @param n String to be converted into its length
 	 * @return
 	 */
-	public static int createMagic (String n) {
-								
-		return n.length() ;
+	public static String createMagic (String w) {
+		
+		if(w.equals("four")) {
+			return w + " is "+"magic.";
+		}else {
+			return w + " is "+ words(w.length())+ ". " + createMagic(words(w.length())) ;
+		}
+	
 		
 	}
 
